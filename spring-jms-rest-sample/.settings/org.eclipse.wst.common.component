@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="spring-jms-rest-sample">
+    <wb-module deploy-name="spring-jms-queue-rest-sample">
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
-        <property name="context-root" value="spring-jms-rest-sample"/>
-        <property name="java-output-path" value="/spring-jms-rest-sample/target/classes"/>
+        <property name="java-output-path" value="/spring-jms-queue-rest-sample/target/classes"/>
+        <property name="context-root" value="spring-jms-queue-rest-sample"/>
     </wb-module>
 </project-modules>

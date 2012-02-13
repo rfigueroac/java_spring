@@ -24,6 +24,7 @@ public class QueueListener implements MessageListener {
 			final TextMessage textMessage = (TextMessage) message;
 			try {
 				logger.debug("QueueListener:" + textMessage.getText());
+				System.out.println("QueueListener:" + textMessage.getText());
 			} catch (final JMSException e) {
 				e.printStackTrace();
 			}
