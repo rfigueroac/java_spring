@@ -6,6 +6,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 
 @Path("/jms")
@@ -16,10 +17,13 @@ public class RestJmsController {
 	private JmsTemplate jmsTemplate;
 	private String destinationName;
 
+	@Autowired
+	private CorrelationIdMessageSender sender;
+	
 	@POST
 	public String send(String message) {
-		jmsTemplate.convertAndSend(destinationName, message);
-		return "Mensaje enviado";
+//		jmsTemplate.convertAndSend(destinationName, message);
+		return sender.send(message);
 	}
 
 	public void setJmsTemplate(JmsTemplate jmsTemplate) {
