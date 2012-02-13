@@ -32,7 +32,7 @@ public class QueueListener implements MessageListener {
 								.createTextMessage();
 						responseMessage.setJMSCorrelationID(requestMessage
 								.getJMSCorrelationID());
-						responseMessage.setText(mensaje);
+						responseMessage.setText("Enviando... "+mensaje);
 						return responseMessage;
 					}
 				});

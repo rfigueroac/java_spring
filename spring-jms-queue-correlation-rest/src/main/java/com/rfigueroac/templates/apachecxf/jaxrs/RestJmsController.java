@@ -17,7 +17,7 @@ public class RestJmsController {
 	private JmsTemplate jmsTemplate;
 	private String destinationName;
 
-	@Autowired
+	
 	private CorrelationIdMessageSender sender;
 	
 	@POST
@@ -33,4 +33,11 @@ public class RestJmsController {
 	public void setDestinationName(String destinationName) {
 		this.destinationName = destinationName;
 	}
+
+
+	public void setSender(CorrelationIdMessageSender sender) {
+		this.sender = sender;
+	}
+	
+	
 }

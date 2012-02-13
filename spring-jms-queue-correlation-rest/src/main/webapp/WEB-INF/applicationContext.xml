@@ -30,6 +30,9 @@
 
 	<!-- Configuracion Rest -->
 
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
 	<bean id="sender"
 		class="com.rfigueroac.templates.apachecxf.jaxrs.CorrelationIdMessageSender">
 		<property name="jmsTemplate" ref="jmsTemplate" />
@@ -41,6 +44,7 @@
 		class="com.rfigueroac.templates.apachecxf.jaxrs.RestJmsController">
 		<property name="destinationName" value="queue_request" />
 		<property name="jmsTemplate" ref="jmsTemplate" />
+		<property name="sender" ref="sender"/>
 	</bean>
 
 	<jaxrs:server id="restContainer" address="/rest">
